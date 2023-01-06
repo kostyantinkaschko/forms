@@ -36,11 +36,16 @@ h2 {
 .common-form,
 .fixed-form {
     display: inline-block;
+    position: relative;
     width: 330px;
 }
 
+.fix-form {
+    z-index: 7;
+}
+
 .fix-form:before,
-.fix-form:after{
+.fix-form:after {
     content: "";
     position: absolute;
     width: 15px;
@@ -48,31 +53,35 @@ h2 {
     cursor: pointer;
 }
 
-.fix-form:before{
+.fix-form:before {
     height: 16px;
     border-left: 2px solid #949494;
     transform: rotate(42deg);
 }
 
-.fix-form:after{
+.fix-form:after {
     top: 15px;
     height: 16px;
     border-right: 2px solid #949494;
     transform: rotate(139deg);
 }
 
-.exit:hover + .fix-form::before,
-.exit:hover + .fix-form:after{
+.exit:hover+.fix-form::before,
+.exit:hover+.fix-form:after {
     border: 2px solid #07be51;
 }
 
-.exit{
+.exit {
     position: absolute;
     right: 6px;
     top: 21px;
     width: 15px;
     height: 16px;
     z-index: 3;
+}
+
+.exit:focus+.fix-form {
+    display: none;
 }
 
 .common-form input:not(.submit),
@@ -82,7 +91,7 @@ h2 {
 
 .common-form select,
 .submit {
-    width: 100%;
+    width: 99%;
 }
 
 .common-form input:not(.submit),
@@ -129,6 +138,23 @@ input::placeholder,
 select {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    appearance: none;
+}
+
+.select-arrow {
+    content: "";
+    position: absolute;
+    right: 20px;
+    z-index: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #1f222c;
+    cursor: pointer;
+}
+
+.top-setting {
+    top: 197px;
 }
 
 input::placeholder,
@@ -145,7 +171,7 @@ input::placeholder,
 
 
 
-.submit{
+.submit {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -273,31 +299,41 @@ hr {
 }
 
 
-table{
+table {
     width: 100%;
+}
+
+.delivery span {
+    position: relative;
+}
+
+.first-radio+.first-radio-label {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
 }
 
 .first-radio {
     position: absolute;
-    top: -2px;
-    left: -3px;
-    z-index: 2;
-    height: 12px;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
 }
 
 .first-radio+.first-radio-label {
     position: relative;
-    padding-left: 27px;
+    padding-left: 25px;
     cursor: pointer;
 }
 
-.first-radio+.first-radio-label:before,
-.first-radio+.first-radio-label:after {
+.first-radio+.first-radio-label::before,
+.first-radio+.first-radio-label::after {
     content: "";
     position: absolute;
 }
 
-.first-radio+.first-radio-label:before {
+.first-radio+.first-radio-label::before {
     left: 0;
     top: -1px;
     width: 14px;
@@ -307,35 +343,198 @@ table{
     border: 1px solid #ccc;
 }
 
-.first-radio:checked+.first-radio-label:before {
+.first-radio:checked+.first-radio-label::before {
     border: 1px solid #244dd7;
     background-color: #fff;
 }
 
-.first-radio:checked+.first-radio-label:after {
+.first-radio:checked+.first-radio-label::after {
     top: 2px;
     left: 3px;
     width: 6px;
     height: 6px;
-    border-radius: 30px;
+    border-radius: 50%;
     border: 2px solid #244dd7;
     background-color: #244dd7;
 }
 
 
+.checkbox-accept,
+.checkbox-accept2,
+.checkbox-accept3 {
+    position: absolute;
+    left: -27px;
+    padding-right: 25px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept4 {
+    width: 149px;
+    height: 16px;
+    position: absolute;
+    top: 195px;
+    left: 19px;
+    padding-right: 25px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept5 {
+    position: absolute;
+    left: 4px;
+    padding-right: 25px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept6 {
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    padding-right: 25px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept2 {
+    top: 22px;
+}
+
+.checkbox-accept3 {
+    top: 44px;
+}
+
+.checkbox-accept-label {
+    position: relative;
+}
+
+.checkbox-accept-label::before,
+.checkbox-accept-label::after {
+    content: "";
+    position: absolute;
+}
+
+.checkbox-accept+.checkbox-accept-label::before,
+.checkbox-accept2+.checkbox-accept-label::before,
+.checkbox-accept3+.checkbox-accept-label::before,
+.checkbox-accept5+.checkbox-accept-label:before,
+.checkbox-accept6+.checkbox-accept-label:before {
+    left: -27px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #c5c5d4;
+}
+
+.checkbox-accept:checked+.checkbox-accept-label::before,
+.checkbox-accept2:checked+.checkbox-accept-label::before,
+.checkbox-accept3:checked+.checkbox-accept-label::before,
+.checkbox-accept4:checked+.checkbox-accept-label::before,
+.checkbox-accept5:checked+.checkbox-accept-label:before,
+.checkbox-accept6:checked+.checkbox-accept-label:before {
+    border: 1px solid #3d69ff;
+}
+
+.checkbox-accept:checked+.checkbox-accept-label::after,
+.checkbox-accept2:checked+.checkbox-accept-label::after,
+.checkbox-accept3:checked+.checkbox-accept-label::after,
+.checkbox-accept4:checked+.checkbox-accept-label::after,
+.checkbox-accept5:checked+.checkbox-accept-label:after,
+.checkbox-accept6:checked+.checkbox-accept-label:after {
+    z-index: 4;
+}
+
+.checkbox-accept+.checkbox-accept-label::after,
+.checkbox-accept2+.checkbox-accept-label::after,
+.checkbox-accept3+.checkbox-accept-label::after,
+.checkbox-accept5+.checkbox-accept-label:after,
+.checkbox-accept6+.checkbox-accept-label:after {
+    left: -23px;
+    top: 5px;
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid #3d69ff;
+    border-bottom: 2px solid #3d69ff;
+    z-index: 0;
+    transform: rotate(-52deg);
+    box-sizing: border-box;
+}
+
+.checkbox-accept4+.checkbox-accept-label:after {
+    left: -15px;
+    top: 4px;
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid #3d69ff;
+    border-bottom: 2px solid #3d69ff;
+    z-index: 0;
+    transform: rotate(-52deg);
+    box-sizing: border-box;
+}
+
+.checkbox-accept4+.checkbox-accept-label:before {
+    left: -19px;
+    top: -1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #c5c5d4;
+}
+
+.position {
+    left: 20px;
+}
+
+.fixed-form .checkbox-accept3 {
+    left: 0;
+}
 
 .date-form {
+    position: relative;
     padding: 20px;
     max-width: 473px;
-    background-color: #f7f7f7
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
 .date-form span:not(.head) {
     margin-right: 23px;
+    padding-left: 21px;
 }
 
 .date-form input {
     margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.date span {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+
+.position3 {
+    position: absolute;
+    left: 120px;
+}
+
+.position4 {
+    position: absolute;
+    right: 254px;
+}
+
+.position5 {
+    position: absolute;
+    right: 110px;
 }
 
 .head {
@@ -354,6 +553,13 @@ table{
     display: flex;
 }
 
+.date input {
+    color: #1f222c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
 .date-top {
     margin-bottom: 15px;
 }
@@ -361,24 +567,151 @@ table{
 
 .style-input {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin-bottom: 160px;
 }
+
 
 
 .people {
+    position: relative;
+    left: -798px;
+}
+
+.man {
+    position: absolute;
+    top: -3px;
+    left: -4px;
+    width: 69px;
+    height: 70px;
+}
+
+.woman {
+    position: absolute;
+    top: 83px;
+    left: -4px;
+    width: 68px;
+    height: 70px;
+}
+
+.man-label,
+.woman-label {
+    position: relative;
+}
+
+
+.man:checked+.man-label a,
+.woman:checked+.woman-label a {
+    color: #3e6aff;
+}
+
+.man-label a,
+.woman-label a {
+    left: 90px;
+    position: absolute;
+    font-size: 16px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-decoration: none;
+}
+
+.man-label a {
+    top: 23px;
+}
+
+.woman-label a {
+    top: 111px;
+}
+
+.man+.man-label:before,
+.woman+.woman-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
     filter: grayscale(1);
 }
 
-#man {
-    margin-bottom: 16px;
+.man:checked+.man-label:before,
+.woman:checked+.woman-label:before {
+    filter: grayscale(0);
 }
 
-#men .man-lebel:before {
+
+
+.man+.man-label:before {
+    background: url(../img/men.png);
+    top: 0;
+}
+
+.woman+.woman-label:before {
+    background: url(../img/women.png);
+    top: 86px;
+}
+
+.form-checkbox {
+    position: relative;
+}
+
+.form-checkbox input {
+    position: absolute;
+    left: -47px;
+    width: 45px;
+    height: 22px;
+    z-index: 4;
+    opacity: 0;
+}
+
+.form-checkbox label {
+    margin-bottom: 18px;
+}
+
+.form-checkbox label:before {
     content: "";
     position: absolute;
-    background: url(../img/men.png);
-    width: 100px;
-    height: 100px;
+    left: -45px;
+    width: 45px;
+    height: 25px;
+    background: #cfcfd1;
+    border-radius: 12px;
+}
+
+.form-checkbox span {
+    margin: 0px 18px;
+    color: #1f222c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form-checkbox label:after {
+    content: "";
+    position: absolute;
+    left: -42px;
+    margin-top: 2px;
+    width: 21px;
+    height: 21px;
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    transition: all .5s ease;
+}
+
+.checkbox2{
+    top: 36px;
+}
+
+.checkbox3{
+    top: 72px;
+}
+
+.form-checkbox input:checked + label:after{
+    left: -24px;
+}
+
+.form-checkbox input:checked + label:before{
+    background: #3e6aff;
 }
 
 .table input {
@@ -387,9 +720,10 @@ table{
 }
 
 
+
+
 .people2 {
-    position: absolute;
-    left: 394px;
+    position: relative;
 }
 
 .td-file {
@@ -485,6 +819,10 @@ h3 {
     justify-content: space-between;
 }
 
+.table {
+    position: relative;
+}
+
 .table tr {
     display: flex;
 }
@@ -516,6 +854,20 @@ h3 {
 
 .table2 table {
     width: 100%;
+}
+
+.second-table {
+    position: relative;
+}
+
+.top-setting2 {
+    left: 477px;
+    top: 226px;
+}
+
+.top-setting3 {
+    left: 239px;
+    top: 41px;
 }
 
 .table2 input:not(input[type="submut"], input[type="checkbox"], #adress) {
@@ -559,14 +911,22 @@ h3 {
 
 .last-checkbox {
     display: flex;
+    margin-top: 23px;
 }
 
 .last-checkbox span {
-    padding-left: 8px;
     color: #1f222c;
     font-size: 14px;
     font-weight: 400;
     font-family: "Roboto";
+}
+
+.last-checkbox {
+    position: relative;
+}
+
+.position2 {
+    left: 32px;
 }
 
 .first-button {
@@ -579,7 +939,7 @@ h3 {
     border: 1px solid #84868d;
 }
 
-.first-button:hover{
+.first-button:hover {
     color: #fff;
     background-color: #85868d;
 }
