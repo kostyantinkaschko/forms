@@ -20,6 +20,14 @@ textarea {
     margin: 0 auto;
 }
 
+h1 {
+    color: #1f222c;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+}
+
 .forms {
     display: flex;
     justify-content: space-between;
@@ -698,19 +706,19 @@ table {
     transition: all .5s ease;
 }
 
-.checkbox2{
+.checkbox2 {
     top: 36px;
 }
 
-.checkbox3{
+.checkbox3 {
     top: 72px;
 }
 
-.form-checkbox input:checked + label:after{
+.form-checkbox input:checked+label:after {
     left: -24px;
 }
 
-.form-checkbox input:checked + label:before{
+.form-checkbox input:checked+label:before {
     background: #3e6aff;
 }
 
