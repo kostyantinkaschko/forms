@@ -5,6 +5,7 @@ body {
 input {
     font-family: "Roboto", sans-serif;
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -47,6 +48,7 @@ h2 {
     position: relative;
     width: 330px;
 }
+
 
 .fix-form {
     z-index: 7;
@@ -92,16 +94,21 @@ h2 {
     display: none;
 }
 
-.common-form input:not(.submit),
-.common-form textarea {
-    width: 89%;
+.common-form input:not(.submit) {
+    width: 330px;
 }
 
-.common-form select,
+.common-form textarea{
+    width: 304px;
+}
+
 .submit {
-    width: 99%;
+    width: 330px;
 }
 
+.common-form select{
+    width: 330px;
+}
 .common-form input:not(.submit),
 .common-form textarea,
 .form-select {
@@ -138,7 +145,7 @@ textarea:focus:not(input[type="checkbox"], input[type="radio"]) {
 .common-form input,
 .common-form select,
 .common-form textarea {
-    padding: 15px;
+    padding: 12px;
 }
 
 input::placeholder,
@@ -152,7 +159,7 @@ select {
 .select-arrow {
     content: "";
     position: absolute;
-    right: 20px;
+    right: 23px;
     z-index: 0;
     width: 0;
     height: 0;
@@ -162,7 +169,7 @@ select {
 }
 
 .top-setting {
-    top: 197px;
+    top: 183px;
 }
 
 input::placeholder,
@@ -201,13 +208,19 @@ input::placeholder,
 }
 
 .fix-form {
-    position: fixed;
+    position: absolute;
     top: 53px;
     padding: 25px 23px 20px;
     background: #fafafa;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.15);
+}
+
+.fixed-form{
+    position: fixed;
+    right: 249px;
+    z-index: 5;
 }
 
 .fix-form h4 {
@@ -324,7 +337,9 @@ table {
 
 .first-radio {
     position: absolute;
-    left: 0;
+    left: -6px;
+    width: 105px;
+    height: 20px;
     z-index: 3;
     opacity: 0;
 }
@@ -575,7 +590,7 @@ table {
 
 .style-input {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     margin-bottom: 160px;
 }
 
@@ -583,23 +598,25 @@ table {
 
 .people {
     position: relative;
-    left: -798px;
+    left: -401px;
 }
 
 .man {
     position: absolute;
     top: -3px;
     left: -4px;
-    width: 69px;
+    width: 159px;
     height: 70px;
+    opacity: 0;
 }
 
 .woman {
     position: absolute;
     top: 83px;
     left: -4px;
-    width: 68px;
+    width: 159px;
     height: 70px;
+    opacity: 0;
 }
 
 .man-label,
@@ -732,6 +749,7 @@ table {
 
 .people2 {
     position: relative;
+    right: 223px;
 }
 
 .td-file {
@@ -784,6 +802,7 @@ table {
 
 .table tr td:first-child,
 .table span:not(.td-file span) {
+    margin-top: 16px;
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
@@ -796,7 +815,7 @@ table {
 
 .table input:not(input[type="file"], input[type="radio"], .submit) {
     padding: 10px;
-    width: 340px;
+    width: 364px;
 }
 
 .table input[type="file"] {
@@ -879,14 +898,16 @@ h3 {
 }
 
 .table2 input:not(input[type="submut"], input[type="checkbox"], #adress) {
-    width: 220px;
+    width: 223px;
     margin: 1px;
     padding: 12px 17px;
     border-radius: 3px;
     border: 1px solid #ccc;
 }
 
-
+/* .table2 table input:first-child{
+    width: 257px;
+} */
 
 .table2 select {
     padding: 10px 10px 11px 10px;
@@ -903,9 +924,10 @@ h3 {
 #adress {
     margin: 0 4px;
     padding: 12px 17px;
-    width: 113%;
+    width: 99.9%;
     border-radius: 3px;
     border: 1px solid #ccc;
+
 }
 
 .table2 th {
@@ -950,4 +972,8 @@ h3 {
 .first-button:hover {
     color: #fff;
     background-color: #85868d;
+}
+
+.end-block{
+    margin-bottom: 156px;
 }
