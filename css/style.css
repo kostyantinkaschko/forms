@@ -893,6 +893,10 @@ h3 {
     font-family: "Roboto";
 }
 
+textarea::placeholder{
+    color: #b3b3b3;
+}
+
 .submit-tr {
     display: flex;
     justify-content: flex-end;
@@ -927,7 +931,6 @@ h3 {
 
 .table2 input:not(input[type="submut"], input[type="checkbox"], #adress) {
     width: 223px;
-    margin: 1px;
     padding: 12px 17px;
     border-radius: 3px;
     border: 1px solid #ccc;
