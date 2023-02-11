@@ -802,6 +802,10 @@ table {
     background: #2857f4;
 }
 
+.colspan td:first-child{
+    margin-right: 132px;
+}
+
 .file {
     position: absolute;
     margin-bottom: 14px;
