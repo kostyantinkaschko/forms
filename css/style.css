@@ -778,6 +778,11 @@ table {
     margin: 25px;
 }
 
+.td-file:hover{
+    filter: grayscale(1);
+    transition: all 1s ease;
+}
+
 .td-file span {
     position: absolute;
     top: -8px;
