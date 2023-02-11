@@ -590,6 +590,7 @@ table {
 
 .date {
     display: flex;
+    align-items: baseline;
 }
 
 .date input {
