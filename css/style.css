@@ -183,7 +183,11 @@ select {
 }
 
 .top-setting {
+<<<<<<< HEAD
+    top: 178px;
+=======
    top: 178px;
+>>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
 }
 
 input::placeholder,
@@ -349,7 +353,7 @@ table {
     font-family: "Roboto";
 }
 
-.first-radio {
+.first-radio:not(#women-radio) {
     position: absolute;
     left: -6px;
     width: 105px;
@@ -357,6 +361,25 @@ table {
     z-index: 3;
     opacity: 0;
 }
+
+#women-radio {
+    position: absolute;
+    left: 78px;
+    width: 105px;
+    height: 20px;
+    z-index: 3;
+    opacity: 0;
+}
+#men-radio {
+    position: absolute;
+    left: -20px;
+    width: 70px;
+    height: 20px;
+    z-index: 3;
+    opacity: 0;
+}
+
+
 
 .first-radio+.first-radio-label {
     position: relative;
@@ -378,6 +401,33 @@ table {
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid #ccc;
+}
+
+#women-radio+.first-radio-label::before {
+    left: 0;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+#men-radio+.first-radio-label::before {
+    left: 0;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+
+.first-radio:disabled+.first-radio-label::before {
+    border: 1px solid #e8e8e8;
 }
 
 .first-radio:checked+.first-radio-label::before {
@@ -406,6 +456,10 @@ table {
     height: 17px;
     z-index: 5;
     opacity: 0;
+}
+
+.checkbox-accept3+.checkbox-accept-label::before {
+    border: 1px solid #e8e8e8;
 }
 
 .checkbox-accept4 {
@@ -465,6 +519,12 @@ table {
     border-radius: 2px;
     z-index: 1;
     background-color: #fff;
+}
+
+.checkbox-accept+.checkbox-accept-label::before,
+.checkbox-accept2+.checkbox-accept-label::before,
+.checkbox-accept5+.checkbox-accept-label:before,
+.checkbox-accept6+.checkbox-accept-label:before {
     border: 1px solid #c5c5d4;
 }
 
@@ -768,7 +828,7 @@ table {
 
 .people2 {
     position: relative;
-    right: 223px;
+    right: 218px;
 }
 
 .td-file {
@@ -802,7 +862,11 @@ table {
     background: #2857f4;
 }
 
+<<<<<<< HEAD
+.colspan td:first-child {
+=======
 .colspan td:first-child{
+>>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
     margin-right: 132px;
 }
 
@@ -830,7 +894,7 @@ table {
 
 .table tr td:first-child,
 .table span:not(.td-file span) {
-    margin-top: 16px;
+    margin: 16px 0 0 0;
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
@@ -853,6 +917,8 @@ table {
 .table select {
     padding: 10px;
     width: 364px;
+    position: relative;
+    background: transparent;
 }
 
 .table tr:first-child th {
@@ -893,7 +959,11 @@ h3 {
     font-family: "Roboto";
 }
 
+<<<<<<< HEAD
+textarea::placeholder {
+=======
 textarea::placeholder{
+>>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
     color: #b3b3b3;
 }
 
@@ -920,17 +990,25 @@ textarea::placeholder{
 }
 
 .top-setting2 {
-    left: 477px;
+    left: 472px;
     top: 226px;
 }
 
 .top-setting3 {
-    left: 239px;
-    top: 41px;
+    left: 201px;
+    top: 40px;
+}
+
+.adressa {
+    width: 452px;
 }
 
 .table2 input:not(input[type="submut"], input[type="checkbox"], #adress) {
+<<<<<<< HEAD
+    width: 224.1px;
+=======
     width: 223px;
+>>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
     padding: 12px 17px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -942,24 +1020,23 @@ textarea::placeholder{
 
 .table2 select {
     padding: 10px 10px 11px 10px;
-    width: 256px;
+    width: 226px;
     border-color: #ccc;
     border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    background: transparent;
 }
 
-.adress {
-    margin: 0;
-    width: 522px;
-}
 
 #adress {
-    margin: 0 4px;
     padding: 12px 17px;
-    width: 99.9%;
+    width: 100%;
     border-radius: 3px;
     border: 1px solid #ccc;
-
 }
+
 
 .table2 th {
     font-size: 13px;
