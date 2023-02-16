@@ -183,11 +183,7 @@ select {
 }
 
 .top-setting {
-<<<<<<< HEAD
-    top: 178px;
-=======
-   top: 178px;
->>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
+    top: 183px;
 }
 
 input::placeholder,
@@ -210,7 +206,7 @@ input::placeholder,
     font-weight: 700;
     font-family: "Roboto";
     background: #12d661;
-    border: 1px solid #12d661;
+    border: none;
     border-radius: 3px;
 }
 
@@ -222,7 +218,6 @@ input::placeholder,
 .submit:hover {
     box-shadow: rgba(8, 118, 52, 0.35) 0px 2px 2.5px;
     background: #07be51;
-    border-color: #07be51;
 }
 
 .fix-form {
@@ -838,11 +833,6 @@ table {
     margin: 25px;
 }
 
-.td-file:hover{
-    filter: grayscale(1);
-    transition: all 1s ease;
-}
-
 .td-file span {
     position: absolute;
     top: -8px;
@@ -860,14 +850,6 @@ table {
     width: 150px;
     color: transparent;
     background: #2857f4;
-}
-
-<<<<<<< HEAD
-.colspan td:first-child {
-=======
-.colspan td:first-child{
->>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
-    margin-right: 132px;
 }
 
 .file {
@@ -959,14 +941,6 @@ h3 {
     font-family: "Roboto";
 }
 
-<<<<<<< HEAD
-textarea::placeholder {
-=======
-textarea::placeholder{
->>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
-    color: #b3b3b3;
-}
-
 .submit-tr {
     display: flex;
     justify-content: flex-end;
@@ -1004,11 +978,8 @@ textarea::placeholder{
 }
 
 .table2 input:not(input[type="submut"], input[type="checkbox"], #adress) {
-<<<<<<< HEAD
-    width: 224.1px;
-=======
     width: 223px;
->>>>>>> 9ec5632c0d9c026197d6c95c7cc31c18260c0478
+    margin: 1px;
     padding: 12px 17px;
     border-radius: 3px;
     border: 1px solid #ccc;
