@@ -300,7 +300,7 @@ input::placeholder,
 }
 
 hr {
-    margin: 22px 0 39px;
+    margin: 29px 0 24px;
     border-top: 1px solid #dcdcde;
     border-bottom: none;
 }
@@ -990,7 +990,7 @@ h3 {
 
 .table2 input:not(input[type="submit"], input[type="checkbox"], #adress) {
     width: 223px;
-    margin: 1px;
+    margin-right: 8px;
     padding: 12px 17px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -1002,13 +1002,15 @@ h3 {
     border-radius: 3px;
 }
 
+
 /* .table2 table input:first-child{
     width: 257px;
 } */
 
 .table2 select {
+  
     padding: 11px 10px 12px 10px;
-    width: 226px;
+    width: 222px;
     border-color: #ccc;
     border-radius: 3px;
     position: absolute;
