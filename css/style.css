@@ -289,6 +289,8 @@ input::placeholder,
     font-size: 13px;
     font-weight: 400;
     font-family: "Roboto";
+    margin-left: 10px;
+
 }
 
 .submit2 {
@@ -365,6 +367,7 @@ table {
     z-index: 3;
     opacity: 0;
 }
+
 #men-radio {
     position: absolute;
     left: -20px;
@@ -471,6 +474,7 @@ table {
 .checkbox-accept5 {
     position: absolute;
     left: 4px;
+    width: 390px;
     padding-right: 25px;
     z-index: 5;
     opacity: 0;
@@ -750,6 +754,10 @@ table {
     top: 86px;
 }
 
+input {
+    cursor: pointer;
+}
+
 .form-checkbox {
     position: relative;
 }
@@ -757,7 +765,7 @@ table {
 .form-checkbox input {
     position: absolute;
     left: -47px;
-    width: 45px;
+    width: 217px;
     height: 22px;
     z-index: 4;
     opacity: 0;
@@ -977,12 +985,18 @@ h3 {
     width: 452px;
 }
 
-.table2 input:not(input[type="submut"], input[type="checkbox"], #adress) {
+.table2 input:not(input[type="submit"], input[type="checkbox"], #adress) {
     width: 223px;
     margin: 1px;
     padding: 12px 17px;
     border-radius: 3px;
     border: 1px solid #ccc;
+}
+
+.table2 input[type="submit"] {
+    padding: 12px 17px;
+    width: 223px;
+    border-radius: 3px;
 }
 
 /* .table2 table input:first-child{
