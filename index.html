@@ -164,16 +164,16 @@
                         <th>Заповніть усі необхідні поля</th>
                     </tr>
                     <tr class="space-beetwen colspan">
-                        <td>ФІО:</td>
+                        <td><label class="fio" for="fio">ФІО:</label></td>
                         <td>
-                            <label for="">
-                                <input type="text" placeholder="Введіть ім’я">
+                            <label for="fio">
+                                <input class="fio" id="fio" type="text" placeholder="Введіть ім’я">
                             </label>
                         </td>
                     </tr>
                     <tr class="space-beetwen colspan">
-                        <td>Пароль:</td>
-                        <td><input type="password" name="password" id="password"
+                        <td><label for="pass">Пароль:</label></td>
+                        <td><input id="pass" type="password" name="password" id="password"
                                 placeholder="Введіть не менше 6 символів" maxlength="6"></td>
                     </tr>
                     <tr class="space-beetwen colspan">
@@ -233,23 +233,23 @@
                         <tr>
                             <th>
                                 <label>
-                                    <span>Прізвище та ім’я</span>
+                                    <span><label for="fio2"> Прізвище та ім’я</label></span>
                                 </label>
                             </th>
                             <th>
                                 <label>
-                                    <span>Ел. пошта</span>
+                                    <span><label for="email3">Ел. пошта</label></span>
                                 </label>
                             </th>
                             <th>
                                 <label>
-                                    <span>Телефон</span>
+                                    <span><label for="tel">Телефон</label></span>
                                 </label>
                             </th>
                         </tr>
                         <tr>
-                            <td><input type="text" id="text"></td>
-                            <td><input type="email" id="email"></td>
+                            <td><input id="fio2" type="text" id="fio2"></td>
+                            <td><input type="email" id="email3"></td>
                             <td><input type="tel" id="tel"></td>
                         </tr>
                     </tbody>
@@ -262,7 +262,7 @@
                                 <label><span>Країна</span></label>
                             </th>
                             <th>
-                                <label><span>Адреса</span></label>
+                                <label class="adress-label"><span><label for="adress">Адреса</label></span></label>
                             </th>
                         </tr>
                         <tr>
@@ -282,13 +282,13 @@
                     <tbody>
                         <tr>
                             <th>
-                                <label><span>Місто</span></label>
+                                <label for="town"><span>Місто</span></label>
                             </th>
                             <th>
-                                <label><span>Будинок</span></label>
+                                <label for="house"><span>Будинок</span></label>
                             </th>
                             <th>
-                                <label><span>Поштовий індекс</span></label>
+                                <label for="post-index"><span>Поштовий індекс</span></label>
                             </th>
                         </tr>
                         <tr>
