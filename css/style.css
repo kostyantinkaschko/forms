@@ -1,325 +1,1081 @@
-<!DOCTYPE html>
-<html lang="Uk">
+body {
+    margin: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Форми, 5 видів форм, та форми таблицею продубльовані 2 рази:)</title>
-</head>
+input {
+    font-family: "Roboto", sans-serif;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
 
-<body>
-    <div class="wrapper">
-        <h1>Форми</h1>
-        <div class="forms">
-            <from action="#" class="common-form">
-                <h2>01. проста форма</h2>
-                <input type="text" name="yourname" placeholder="Ваше ім'я" required>
-                <input type="email" name="email" placeholder="Email">
-                <select class="form-select" name="yourcity" id="city">
-                    <option id="grey" value="0">Ваше місто</option>
-                    <option value="kiyv">Київ</option>
-                    <option value="lviv">Львів</option>
-                    <option value="khm">Хмельницький</option>
-                </select>
-                <label for="select" class="select-arrow top-setting"></label>
-                <textarea name="Email" value="email2" id="email" cols="30" rows="10" placeholder="Email"></textarea>
-                <input class="submit" type="submit" name="Submit" id="submit-button" value="Зареєструватися">
+textarea {
+    resize: vertical;
+}
 
-            </from>
-            <form action="#" class="fixed-form">
-                <h2>06. фіксована форма</h2>
-                <div class="fix-form">
-                    <a class="exit" href="#">+</a>
-                    <h4>Логін</h4>
-                    <input class="input-hover" type="email" required>
-                    <h4>Пароль</h4>
-                    <input class="input-hover"  type="password" required>
-                    <a href="#">Забули пароль?</a>
-                    <input class="checkbox checkbox-accept4" type="checkbox" name="Запам’ятати пароль" id="4" required>
-                    <label class="remember-me checkbox-accept-label position">
-                        <span>Запам’ятати пароль</span>
-                    </label>
-                    <input class="submit submit2" type="submit" name="Enter" value="Увійти" id="4">
-                </div>
-            </form>
-        </div>
-        <hr>
-        <div class="elements">
-            <h2>02. елементи</h2>
-            <div class="flex">
-                <section class="elements-section">
-                    <form action="#">
-                        <form class="delivery" action="#">
-                            <span>
-                                <input class="first-radio" type="radio" name="delivery" id="first-radio">
-                                <label class="first-radio-label">
-                                    <span>Нова Пошта</span>
-                                </label>
-                            </span>
-                            <span>
-                                <input class="first-radio" name="delivery" type="radio">
-                                <label class="first-radio-label">
-                                    <span>Кур’єр</span>
-                                </label>
-                            </span>
-                            <span>
-                                <input class="first-radio" type="radio" name="delivery" disabled>
-                                <label class="first-radio-label">
-                                    <span>Самовивіз</span>
-                                </label>
-                            </span>
-                        </form>
-                        <form class="checkbox-style-element" action="#">
-                            <input class="checkbox-accept" type="checkbox">
-                            <label class="checkbox-accept-label">
-                                <span>Прочитав умови договору</span>
-                            </label>
-                            <input class="checkbox-accept2" type="checkbox">
-                            <label  class="checkbox-accept-label">
-                                <span>Згідний з ПДВ 9%</span>
-                            </label>
-                            <input class="checkbox-accept3" type="checkbox"  disabled>
-                            <label  class="checkbox-accept-label">
-                                <span>Отримувати новини на ел. пошту</span>
-                            </label>
-                        </form>
-                </section>
-                <section class="date-form">
-                    <form action="#" method="post">
-                        <label class="date date-top">
-                            <span class="head">Статус</span>
-                            <div class="position3">
-                                <input class="checkbox-accept6" type="checkbox" name="news" id="news-checkbox">
-                                <label class="checkbox-accept-label" for="checkbox"></label>
-                            </div>
-                            <span>Новини</span>
-                            <div class="position4">
-                                <input class="checkbox-accept" type="checkbox" name="action" id="action">
-                                <label class="checkbox-accept-label" for="checkbox"></label>
-                            </div>
-                            <span>Акційні товари</span>
-                            <div class="position5">
-                                <input class="checkbox-accept" type="checkbox" name="news" id="news-checkbox">
-                                <label class="checkbox-accept-label" for="checkcbox"></label>
-                            </div>
-                            <span>Розпродаж</span>
-                        </label>
-                        <label class="date">
-                            <span class="head head-bottom">Дата</span>
-                            <input type="date" name="date" id="date">
-                        </label>
-                    </form>
-                </section>
-            </div>
+* {
+    outline: none;
+}
 
-        </div>
-        <hr>
-        <div class="style-ckecbox">
-            <h2>03. стилізовані чекбокси </h2>
-            <div class="style-input">
-                <div class="style-checkboxes">
-                    <form action="" class="people">
-                        <div class="man-div">
-                            <input class="man" type="radio" value="man" id="man" name="people">
-                            <label for="man" class="man-label">
-                                <a href="#">Чоловік</a>
-                            </label>
-                        </div>
-                        <div class="woman-div">
-                            <input class="woman" value="woman" type="radio" id="woman" name="people">
-                            <label for="woman" class="woman-label">
-                                <a href="#">Жінка</a>
-                            </label>
-                        </div>
-                    </form>
-                    <div class="checkbox-form">
-                        <form class="form-checkbox" action="#">
-                            <input type="checkbox" name="news" id="news">
-                            <label>
-                                <span>Включити світло</span>
-                            </label>
-                            <input class="checkbox2" type="checkbox" name="sausage" id="sausage">
-                            <label>
-                                <span>Купити додому ковбаси</span>
-                            </label>
-                            <input class="checkbox3" type="checkbox" name="light" id="light">
-                            <label>
-                                <span>Включити світло</span>
-                            </label>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+.wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+}
 
-        <hr>
-        <div class="table">
-            <h2>04. форма таблицею</h2>
-            <form action="">
-                <table>
-                    <tr>
-                        <th>Заповніть усі необхідні поля</th>
-                    </tr>
-                    <tr class="space-beetwen colspan">
-                        <td><label class="fio" for="fio">ФІО:</label></td>
-                        <td>
-                            <label for="fio">
-                                <input class="fio" id="fio" type="text" placeholder="Введіть ім’я">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr class="space-beetwen colspan">
-                        <td><label for="pass">Пароль:</label></td>
-                        <td><input id="pass" type="password" name="password" id="password"
-                                placeholder="Введіть не менше 6 символів" maxlength="6"></td>
-                    </tr>
-                    <tr class="space-beetwen colspan">
-                        <td>Місто:</td>
-                        <td>
-                            <select class="form-select" name="Your city" id="city">
-                                <option id="grey" value="0">Ваше місто</option>
-                                <option value="1">Київ</option>
-                                <option value="2">Львів</option>
-                                <option value="3">Хмельницький</option>
-                            </select>
-                            <label for="select" class="select-arrow top-setting2"></label>
-                        </td>
-                    </tr>
-                    <tr class="flex space-beetwen">
-                        <td>Стать:</td>
-                        <td class="people2">
-                            <input class="first-radio" type="radio" name="people" id="men-radio">
-                            <lable class="first-radio-label">
-                                <span>Чоловік</span>
-                            </lable>
-                            <input class="first-radio" type="radio" name="people" id="women-radio">
-                            <label class="first-radio-label" for="">
-                                <span>Жінка</span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr class="space-beetwen">
-                        <td>Фото:</td>
-                        <td class="td-file">
-                            <input type="file" name="file" id="file">
-                            <label for="file" class="file">
-                                <span>Виберіть файл</span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr class="space-beetwen">
-                        <td>Коментарій:</td>
-                        <td><textarea name="comment" id="comment" placeholder="Введіть текст повідомлення"></textarea>
-                        </td>
-                    </tr>
-                    <tr class="submit-tr">
-                        <td><input type="submit" value="Зареєструватися" class="submit">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <hr>
+h1 {
+    color: #1f222c;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+}
 
-        <section class="table2">
-            <h2>05. форма таблицею</h2>
-            <form action="">
-                <h3>Оформлення заявки</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>
-                                <label>
-                                    <span><label for="fio2"> Прізвище та ім’я</label></span>
-                                </label>
-                            </th>
-                            <th>
-                                <label>
-                                    <span><label for="email3">Ел. пошта</label></span>
-                                </label>
-                            </th>
-                            <th>
-                                <label>
-                                    <span><label for="tel">Телефон</label></span>
-                                </label>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td><input id="fio2" type="text" id="fio2"></td>
-                            <td><input type="email" id="email3"></td>
-                            <td><input type="tel" id="tel"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr class="beetwen-table">
-                <table class="second-table">
-                    <tbody>
-                        <tr>
-                            <th>
-                                <label><span>Країна</span></label>
-                            </th>
-                            <th>
-                                <label class="adress-label"><span><label for="adress">Адреса</label></span></label>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <select name="country" id="country">
-                                    <option value="indonesia">Індонезія</option>
-                                    <option value="Ukraine">Україна</option>
-                                    <option value="polsha">Польща</option>
-                                </select>
-                                <label for="select" class="select-arrow top-setting3"></label>
-                            </td>
-                            <td  class="adressa"><input type="text" id="adress"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>
-                                <label for="town"><span>Місто</span></label>
-                            </th>
-                            <th>
-                                <label for="house"><span>Будинок</span></label>
-                            </th>
-                            <th>
-                                <label for="post-index"><span>Поштовий індекс</span></label>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" id="town"></td>
-                            <td><input type="text" id="house"></td>
-                            <td><input type="text" id="post-index"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="last-checkbox">
-                    <input class="checkbox-accept5" type="checkbox" id="check-bottom">
-                    <label class="checkbox-accept-label position2">
-                        <span>Я погоджуюсь з правилами оплати та доставки товару</span>
-                    </label>
-                </div>
-                <hr>
-                <div class="flex end-block">
-                    <div>
-                        <label>
-                            <input class="first-button" type="button" id="go-to-start" value="Повернутися назад">
-                        </label>
-                    </div>
-                    <div>
-                        <labe>
-                            <input class="submit" type="submit" id="buy" value="Оформити покупку">
-                            </label>
-                    </div>
-                </div>
-            </form>
-        </section>
-    </div>
-</body>
+.forms {
+    display: flex;
+    justify-content: space-between;
+}
 
-</html>
+h2 {
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+
+.common-form,
+.fixed-form {
+    display: inline-block;
+    position: relative;
+    width: 330px;
+}
+
+
+.fix-form {
+    z-index: 7;
+}
+
+
+.exit {
+    position: absolute;
+    right: 11px;
+    top: 7px;
+    color: #9b9b9b;
+    font-size: 30px;
+    transition: all .5s ease;
+    transform: rotate(45deg);
+    text-decoration: none;
+} 
+
+.exit:hover{
+    color: #07be51;
+    transform: rotate(405deg);
+}
+
+.common-form input:not(.submit) {
+    width: 330px;
+}
+
+.common-form textarea {
+    margin-top: 51px;
+    width: 304px;
+}
+
+.submit {
+    width: 330px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.common-form select {
+    width: 330px;
+    position: absolute;
+    z-index: 4;
+    background: transparent;
+    cursor: pointer;
+}
+
+.common-form input:not(.submit),
+textarea,
+.form-select {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.common-form input:not(.submit),
+.common-form textarea,
+.form-select {
+    margin-bottom: 8px;
+}
+
+.common-form input:focus:not(.submit),
+.common-form textarea:focus,
+input:focus:not(input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"]),
+textarea:focus:not(input[type="checkbox"], input[type="radio"]) {
+    border-color: #3d69ff;
+    box-shadow: #3d69ff 0 0 2.5px;
+}
+
+.common-form input,
+.form-select {
+    color: #1f222c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.common-form option {
+    padding: 12px 15px;
+}
+
+.common-form input,
+.common-form select,
+.common-form textarea {
+    padding: 12px;
+}
+
+input::placeholder,
+.common-form option,
+select {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    appearance: none;
+}
+
+.select-arrow {
+    content: "";
+    position: absolute;
+    right: 23px;
+    z-index: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #1f222c;
+    cursor: pointer;
+}
+
+.top-setting {
+    top: 178px;
+}
+
+input::placeholder,
+.form-select option:first-child {
+    color: #b3b3b3;
+}
+
+.common-form textarea::placeholder {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.submit {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+    background: #12d661;
+    border: none;
+    border-radius: 3px;
+}
+
+
+.submit[value] {
+    color: #fff;
+}
+
+.submit:hover {
+    box-shadow: rgba(8, 118, 52, 0.35) 0px 2px 2.5px;
+    background: #07be51;
+}
+
+.fix-form {
+    position: absolute;
+    top: 53px;
+    padding: 25px 23px 20px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.15);
+}
+
+.fixed-form {
+    position: fixed;
+    right: 249px;
+    z-index: 5;
+}
+
+.fix-form h4 {
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+.fix-form input:not(.checkbox, .submit2) {
+    width: 94%;
+}
+
+.fix-form input:first-child {
+    margin: 0 1px;
+}
+
+.input-hover {
+    padding-left: 12px;
+    margin: 5px 0 11px 0;
+    height: 41px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.input-hover:focus {
+    border-color: #3d69ff;
+    box-shadow: #3d69ff 0 0 2.5px;
+}
+
+.fix-form a:not(.exit) {
+    color: #3e6aff;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.fix-form a:hover:not(.exit) {
+    text-decoration: underline;
+}
+
+
+.remember-me {
+    display: flex;
+    margin: 15px 0;
+}
+
+.remember-me span {
+    color: #1f222c;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin-left: 10px;
+
+}
+
+.submit2 {
+    padding: 15px 0;
+    width: 100%;
+}
+
+hr {
+    margin: 29px 0 24px;
+    border-top: 1px solid #dcdcde;
+    border-bottom: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elements-section {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.elements-section form {
+    margin-right: 60px;
+}
+
+.elements-section label {
+    margin-bottom: 3px;
+}
+
+.elements-section span {
+    color: #1f222c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.elements-section form {
+    display: grid;
+    position: relative;
+}
+
+
+table {
+    width: 100%;
+}
+
+.delivery span {
+    position: relative;
+}
+
+.first-radio+.first-radio-label {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.first-radio:not(#women-radio) {
+    position: absolute;
+    left: -6px;
+    width: 105px;
+    height: 20px;
+    z-index: 3;
+    opacity: 0;
+}
+
+#women-radio {
+    position: absolute;
+    left: 78px;
+    width: 105px;
+    height: 20px;
+    z-index: 3;
+    opacity: 0;
+}
+
+#men-radio {
+    position: absolute;
+    left: -20px;
+    width: 70px;
+    height: 20px;
+    z-index: 3;
+    opacity: 0;
+}
+
+
+
+.first-radio+.first-radio-label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.first-radio+.first-radio-label::before,
+.first-radio+.first-radio-label::after {
+    content: "";
+    position: absolute;
+}
+
+.first-radio+.first-radio-label::before {
+    left: 0;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#women-radio+.first-radio-label::before {
+    left: 0;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+#men-radio+.first-radio-label::before {
+    left: 0;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+
+.first-radio:disabled+.first-radio-label::before {
+    border: 1px solid #e8e8e8;
+}
+
+.first-radio:disabled+.first-radio-label span,
+.checkbox-accept3:disabled+.checkbox-accept-label span {
+    color: #e8e8e8;
+}
+
+
+.first-radio:checked+.first-radio-label::before {
+    border: 1px solid #244dd7;
+    background-color: #fff;
+}
+
+.first-radio:checked+.first-radio-label::after {
+    top: 2px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #244dd7;
+    background-color: #244dd7;
+}
+
+
+.checkbox-accept,
+.checkbox-accept2,
+.checkbox-accept3 {
+    position: absolute;
+    left: -27px;
+    padding-right: 25px;
+    width: 119px;
+    height: 17px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept3+.checkbox-accept-label::before {
+    border: 1px solid #e8e8e8;
+}
+
+.checkbox-accept4 {
+    width: 149px;
+    height: 16px;
+    position: absolute;
+    top: 198px;
+    left: 19px;
+    padding-right: 25px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept5 {
+    position: absolute;
+    left: 4px;
+    width: 390px;
+    padding-right: 25px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept6 {
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    padding-right: 25px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.checkbox-accept2 {
+    top: 22px;
+}
+
+.checkbox-accept3 {
+    top: 44px;
+}
+
+.checkbox-accept-label {
+    position: relative;
+}
+
+.checkbox-accept-label::before,
+.checkbox-accept-label::after {
+    content: "";
+    position: absolute;
+}
+
+.checkbox-accept+.checkbox-accept-label::before,
+.checkbox-accept2+.checkbox-accept-label::before,
+.checkbox-accept3+.checkbox-accept-label::before,
+.checkbox-accept5+.checkbox-accept-label:before,
+.checkbox-accept6+.checkbox-accept-label:before {
+    left: -27px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.checkbox-accept+.checkbox-accept-label::before,
+.checkbox-accept2+.checkbox-accept-label::before,
+.checkbox-accept5+.checkbox-accept-label:before,
+.checkbox-accept6+.checkbox-accept-label:before {
+    border: 1px solid #c5c5d4;
+}
+
+.checkbox-accept:checked+.checkbox-accept-label::before,
+.checkbox-accept2:checked+.checkbox-accept-label::before,
+.checkbox-accept3:checked+.checkbox-accept-label::before,
+.checkbox-accept4:checked+.checkbox-accept-label::before,
+.checkbox-accept5:checked+.checkbox-accept-label:before,
+.checkbox-accept6:checked+.checkbox-accept-label:before {
+    border: 1px solid #3d69ff;
+}
+
+.checkbox-accept:checked+.checkbox-accept-label::after,
+.checkbox-accept2:checked+.checkbox-accept-label::after,
+.checkbox-accept3:checked+.checkbox-accept-label::after,
+.checkbox-accept4:checked+.checkbox-accept-label::after,
+.checkbox-accept5:checked+.checkbox-accept-label:after,
+.checkbox-accept6:checked+.checkbox-accept-label:after {
+    z-index: 4;
+}
+
+.checkbox-accept+.checkbox-accept-label::after,
+.checkbox-accept2+.checkbox-accept-label::after,
+.checkbox-accept3+.checkbox-accept-label::after,
+.checkbox-accept5+.checkbox-accept-label:after,
+.checkbox-accept6+.checkbox-accept-label:after {
+    left: -23px;
+    top: 5px;
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid #3d69ff;
+    border-bottom: 2px solid #3d69ff;
+    z-index: 0;
+    transform: rotate(-52deg);
+    box-sizing: border-box;
+}
+
+.checkbox-accept4+.checkbox-accept-label:after {
+    left: -15px;
+    top: 4px;
+    width: 9px;
+    height: 5px;
+    border-left: 2px solid #3d69ff;
+    border-bottom: 2px solid #3d69ff;
+    z-index: 0;
+    transform: rotate(-52deg);
+    box-sizing: border-box;
+}
+
+.checkbox-accept4+.checkbox-accept-label:before {
+    left: -19px;
+    top: -1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #c5c5d4;
+}
+
+.position {
+    left: 20px;
+}
+
+.fixed-form .checkbox-accept3 {
+    left: 0;
+}
+
+.date-form {
+    position: relative;
+    padding: 20px;
+    max-width: 473px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.date-form span:not(.head) {
+    margin-right: 23px;
+    padding-left: 21px;
+}
+
+.date-form input {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.date span {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+
+.position3 {
+    position: absolute;
+    left: 120px;
+}
+
+.position4 {
+    position: absolute;
+    right: 254px;
+}
+
+.position5 {
+    position: absolute;
+    right: 110px;
+}
+
+.head {
+    margin-right: 28px;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+}
+
+.head-bottom {
+    margin-right: 40px;
+}
+
+.date {
+    display: flex;
+    align-items: baseline;
+}
+
+.date input {
+    color: #1f222c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.date-top {
+    margin-bottom: 15px;
+}
+
+
+.style-input {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 160px;
+}
+
+
+
+.people {
+    position: relative;
+    left: -401px;
+}
+
+.man {
+    position: absolute;
+    top: -3px;
+    left: -4px;
+    width: 159px;
+    height: 70px;
+    opacity: 0;
+    z-index: 5;
+}
+
+.woman {
+    position: absolute;
+    top: 83px;
+    left: -4px;
+    width: 159px;
+    height: 70px;
+    opacity: 0;
+    z-index: 5;
+}
+
+.man-label,
+.woman-label {
+    position: relative;
+}
+
+
+.man:checked+.man-label a,
+.woman:checked+.woman-label a {
+    color: #3e6aff;
+}
+
+.man-label a,
+.woman-label a {
+    left: 90px;
+    position: absolute;
+    font-size: 16px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-decoration: none;
+}
+
+.man-label a {
+    top: 23px;
+}
+
+.woman-label a {
+    top: 111px;
+}
+
+.man+.man-label:before,
+.woman+.woman-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    filter: grayscale(1);
+}
+
+.man:checked+.man-label:before,
+.woman:checked+.woman-label:before {
+    filter: grayscale(0);
+}
+
+
+
+.man+.man-label:before {
+    background: url(../img/men.png);
+    top: 0;
+}
+
+.woman+.woman-label:before {
+    background: url(../img/women.png);
+    top: 86px;
+}
+
+input {
+    cursor: pointer;
+}
+
+.form-checkbox {
+    position: relative;
+}
+
+.form-checkbox input {
+    position: absolute;
+    left: -47px;
+    width: 217px;
+    height: 22px;
+    z-index: 4;
+    opacity: 0;
+}
+
+.form-checkbox label {
+    margin-bottom: 18px;
+}
+
+.form-checkbox label:before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    width: 45px;
+    height: 25px;
+    background: #cfcfd1;
+    border-radius: 12px;
+}
+
+.form-checkbox span {
+    margin: 0px 18px;
+    color: #1f222c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form-checkbox label:after {
+    content: "";
+    position: absolute;
+    left: -42px;
+    margin-top: 2px;
+    width: 21px;
+    height: 21px;
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    transition: all .5s ease;
+}
+
+.checkbox2 {
+    top: 36px;
+}
+
+.checkbox3 {
+    top: 72px;
+}
+
+.form-checkbox input:checked+label:after {
+    left: -24px;
+}
+
+.form-checkbox input:checked+label:before {
+    background: #3e6aff;
+}
+
+.table input {
+    border-radius: 3px;
+}
+
+.table input:not(input[type="submit"]) {
+    border: 1px solid #ccc;
+}
+
+
+
+
+.people2 {
+    position: relative;
+    right: 218px;
+}
+
+.td-file {
+    position: relative;
+    right: 339px;
+    top: -21px;
+    margin: 25px;
+}
+
+.td-file span {
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    padding: 20px 36px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.table input[type="file"] {
+    position: absolute;
+    padding: 8px;
+    width: 150px;
+    color: transparent;
+    background-color: #3e6aff;
+}
+
+.table input[type="file"]:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(15, 40, 126, 0.35));
+    background-color: #2857f4;
+}
+
+.fio:hover {
+    border: white;
+}
+
+.file {
+    position: absolute;
+    margin-bottom: 14px;
+    display: block;
+    width: 170px;
+    height: 41px;
+    border-radius: 3px;
+    background-color: #3e6aff;
+    transition: all 1s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.form-checkbox {
+    display: grid;
+}
+
+table {
+    width: 500px;
+}
+
+.table tr td:first-child,
+.table span:not(.td-file span) {
+    margin: 16px 0 0 0;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.table tr {
+    padding-bottom: 13px;
+}
+
+.table input:not(input[type="file"], input[type="radio"], .submit) {
+    padding: 10px;
+    width: 364px;
+    height: 41px;
+}
+
+.table input[type="file"] {
+    margin-right: 111px;
+}
+
+.table select {
+    padding: 10px;
+    width: 364px;
+    height: 41px;
+    position: relative;
+    background: transparent;
+}
+
+.table tr:first-child th {
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+    padding-bottom: 24px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.space-beetwen {
+    justify-content: space-between;
+}
+
+.table {
+    position: relative;
+}
+
+.table tr {
+    display: flex;
+}
+
+
+.table textarea {
+    width: 329px;
+    height: 130px;
+    padding: 15px 16px;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.submit-tr {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-tr input {
+    width: 364px;
+    height: 44px;
+}
+
+.table2 {
+    max-width: 684px;
+}
+
+.table2 table {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.second-table {
+    position: relative;
+}
+
+.top-setting2 {
+    left: 472px;
+    top: 235px;
+}
+
+.top-setting3 {
+    left: 201px;
+    top: 40px;
+}
+
+.adressa {
+    width: 452px;
+}
+
+.table2 input:not(input[type="submit"], input[type="checkbox"], #adress) {
+    width: 222.3px;
+    margin: 0 8px 0 -3px;
+    padding: 12px 17px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.second-table select {
+    margin-right: -3px;
+}
+
+.table2 input[type="submit"] {
+    padding: 12px 17px;
+    width: 223px;
+    border-radius: 3px;
+}
+
+
+/* .table2 table input:first-child{
+    width: 257px;
+} */
+
+.table2 select {
+    padding: 11px 10px 12px 10px;
+    width: 226px;
+    border-color: #ccc;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    background: transparent;
+}
+
+
+.adress-label {
+    margin: 10px;
+}
+
+
+#adress {
+    margin-left: 7.3px;
+    padding: 12px 17px;
+    width: 99%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+
+.table2 th {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    text-align: justify;
+    font-family: "Roboto";
+    padding-right: 86px;
+}
+
+.last-checkbox {
+    display: flex;
+    margin-top: 23px;
+}
+
+.last-checkbox span {
+    color: #1f222c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.last-checkbox {
+    position: relative;
+}
+
+.position2 {
+    left: 32px;
+}
+
+.first-button {
+    color: #6e6f77;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #84868d;
+}
+
+.first-button:hover {
+    color: #fff;
+    background-color: #85868d;
+}
+
+.end-block {
+    margin-bottom: 156px;
+}
