@@ -55,47 +55,21 @@ h2 {
     z-index: 7;
 }
 
-.fix-form:before,
-.fix-form:after {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: 287px;
-    width: 15px;
-    right: 0;
-    cursor: pointer;
-}
-
-
-.fix-form:before {
-    height: 16px;
-    border-left: 2px solid #949494;
-    transform: rotate(42deg);
-}
-
-.fix-form:after {
-    top: 15px;
-    height: 16px;
-    border-right: 2px solid #949494;
-    transform: rotate(139deg);
-}
-
-.exit:hover+.fix-form::before,
-.exit:hover+.fix-form:after {
-    border: 2px solid #07be51;
-}
 
 .exit {
     position: absolute;
-    right: 6px;
-    top: 21px;
-    width: 15px;
-    height: 16px;
-    z-index: 3;
-}
+    right: 11px;
+    top: 7px;
+    color: #9b9b9b;
+    font-size: 30px;
+    transition: all .5s ease;
+    transform: rotate(45deg);
+    text-decoration: none;
+} 
 
-.exit:focus+.fix-form {
-    display: none;
+.exit:hover{
+    color: #07be51;
+    transform: rotate(405deg);
 }
 
 .common-form input:not(.submit) {
@@ -268,7 +242,7 @@ input::placeholder,
     box-shadow: #3d69ff 0 0 2.5px;
 }
 
-.fix-form a {
+.fix-form a:not(.exit) {
     color: #3e6aff;
     font-size: 13px;
     font-weight: 400;
@@ -277,7 +251,7 @@ input::placeholder,
     margin-bottom: 15px;
 }
 
-.fix-form a:hover {
+.fix-form a:hover:not(.exit) {
     text-decoration: underline;
 }
 
